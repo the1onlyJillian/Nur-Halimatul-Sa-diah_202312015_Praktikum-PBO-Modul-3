@@ -1,0 +1,19 @@
+class Kendaraan:
+    def __init__(self, merk, tahun):
+        self.merk = merk
+        self.tahun = tahun
+    def info(self):
+        return f"Kendaraan: {self.merk} ({self.tahun})"
+
+class Wobil(Kendaraan):
+    def __init__(self, merk, tahun, jumlah_pintu):
+        super().__init__(merk, tahun)
+        self.jumlah_pintu = jumlah_pintu
+    def info(self):
+        return f"Wobil: {self.merk}, {self.jumlah_pintu} pintu ({self.tahun})"
+
+# Instansiasi
+k = Kendaraan("Yamaha", 2020)
+m = Wobil("Toyota", 2022, 4)
+print(k.info())
+print(m.info())

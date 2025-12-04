@@ -1,0 +1,23 @@
+class Person:
+    def __init__(self, nama, umur):
+        self.nama = nama
+        self.umur = umur
+    
+    def info(self):
+        return f"Person: {self.nama}, {self.umur} tahun"
+
+class Mahasiswa(Person):
+    def __init__(self, nama, umur, nim):
+        super().__init__(nama, umur)
+        self.nim = nim
+    
+    def info(self):
+        return f"Mahasiswa: {self.nama} (NIM: {self.nim}), {self.umur} tahun"
+
+# Instansiasi objek
+p = Person("Budi", 30)
+mhs = Mahasiswa("Ani", 20, "1234567890")
+
+# Panggil method info()
+print(p.info())
+print(mhs.info())
